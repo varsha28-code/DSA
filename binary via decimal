@@ -1,0 +1,21 @@
+---------------------------decimal to binary-----------------------
+n=13
+res=""
+while n>0:
+  if n%2==1:
+    res+=1
+  else:
+    res+=0
+  n=n//2
+print(res[::-1])
+------------------------------binary to decimal------------------
+n="1101"
+p2=1
+res=0
+for i in range(len(n)-1,-1,-1):
+    if n[i]=='1':
+       res+=p2
+    p2*=2
+print(res)
+
+
