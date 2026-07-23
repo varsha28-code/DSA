@@ -1,3 +1,13 @@
+class Solution(object):
+    def subsets(self, nums):
+        ans = [[]]
+        for num in nums:
+            new_subsets = []
+            for subset in ans:
+                new_subsets.append(subset + [num])
+            ans.extend(new_subsets)
+        return ans
+----------------------------------------------------------------------------
 def Subsets(nums):
     n=len(nums)
     total_subsets=1<<n
