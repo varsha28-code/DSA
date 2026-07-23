@@ -8,6 +8,22 @@ class Solution(object):
             ans.extend(new_subsets)
         return ans
 ----------------------------------------------------------------------------
+backtracking:---
+class Solution(object):
+    def subsets(self, nums):
+        ans = []
+        def backtrack(index, path):
+            if index == len(nums):
+                ans.append(path[:])   
+                return
+            path.append(nums[index])
+            backtrack(index + 1, path))
+            path.pop()
+            backtrack(index + 1, path)
+        backtrack(0, [])
+        return ans
+----------------------------------------------------------------------------
+bit manipulation:---
 def Subsets(nums):
     n=len(nums)
     total_subsets=1<<n
